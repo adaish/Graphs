@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"Plotting crime\"\nauthor: \"Alice\"\ndate: \"Sunday, February 08, 2015\"\noutput: html_document\n---\n\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\n```{r}\ncrime<-read.csv(\"C:/Users/sarah inspiron/Documents/GitHub/Graphs/Graphs/2014-12-city-of-london-street.csv\")\n\nplot(crime$Longitude,crime$Latitude)\n```\n\nYou can also embed plots, for example:\n\n```{r, echo=FALSE}\nplot(cars)\n```\n\nNote that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.\n",
+    "created" : 1423425631463.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "561929689",
+    "id" : "444A1AC4",
+    "lastKnownWriteTime" : 31244173393002613,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

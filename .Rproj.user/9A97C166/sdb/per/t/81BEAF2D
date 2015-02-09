@@ -1,0 +1,16 @@
+{
+    "contents" : "##############################Maps google ######################\n#install.packages(\"ggplot2\")\n#install.packages(\"ggmap\")\nrequire(ggplot2)\nrequire(ggmap)\n\n# creating a sample data.frame with your lat/lon points\ncitycrimelondon<-read.csv(\"C:/Users/sarah inspiron/Documents/GitHub/Graphs/Graphs/2014-12-city-of-london-street.csv\")\nlon <- citycrimelondon$Longitude\nlat <- citycrimelondon$Latitude\ndf <- as.data.frame(cbind(lon,lat))\n\n# getting the map\nmapgilbert <- get_map(location = c(lon = mean(df$lon), lat = mean(df$lat)), zoom = 14,\n                      maptype = \"satellite\", scale = 2)\n\n# plotting the map with some points on it\nggmap(mapgilbert) +\n  geom_point(data = citycrimelondon, aes(x = lon, y = lat, fill = \"red\", alpha = 0.8), size = 4, shape = 21) +\n  guides(fill=FALSE, alpha=FALSE, size=FALSE)\n\n\n",
+    "created" : 1423422860816.000,
+    "dirty" : false,
+    "encoding" : "ISO8859-1",
+    "folds" : "",
+    "hash" : "1602858145",
+    "id" : "81BEAF2D",
+    "lastKnownWriteTime" : 1423421525,
+    "path" : "~/GitHub/Graphs/ggmap_crime.R",
+    "project_path" : "ggmap_crime.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

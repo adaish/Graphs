@@ -1,0 +1,17 @@
+{
+    "contents" : "crime<-read.csv(\"C:/Users/sarah inspiron/Documents/GitHub/Graphs/2014-12-city-of-london-street.csv\")\nrequire(data.table)\nrequire(ggplot2)\nhead(crime)\nplot(crime$Longitude,crime$Latitude)\n\ncrime1<-data.table(crime)\nattach(crime1)\ntypecrime<-crime1[,sum(ID),by=\"Crime.type\"]\ntype<-length(unique(Crime.type))\nbarplot(typecrime$V1,names.arg=type)\n\nty<- typecrime[order(-V1),] \nbarplot(ty,type)#names.arg=Crime.type)\ntext()",
+    "created" : 1423425719620.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1702756340",
+    "id" : "EABF9868",
+    "lastKnownWriteTime" : 31244173386448897,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
