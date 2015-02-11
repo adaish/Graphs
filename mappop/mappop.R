@@ -1,22 +1,23 @@
-#Mapping London
+#Mapping London (Code dojo london 11/02/2015)
 rm(list=ls()) #Remove 
 
 #Using http://spatial.ly/2013/12/introduction-spatial-data-ggplot2/
 
 #set up packages
+install.packages("ggplot2")
 install.packages("reshape2")
 install.packages("ggmap")
 install.packages("rgdal")
-install.packages("ggplot2")
 
+require(ggplot2)
 require(reshape2)
 require(ggmap)
 require(rgdal)
-require(ggplot2)
+
 
 #Set working directory and load files
-setwd("//barracuda/users/alice.daish/My Documents/DEV/Graphs") #set up location of file
-london.data<-read.csv("//barracuda/users/alice.daish/My Documents/DEV/Graphs/census-historic-population-borough.csv")
+setwd("C:/Users/sarah inspiron/Documents/GitHub/Graphs/mappop") #set up location of file
+london.data<-read.csv("C:/Users/sarah inspiron/Documents/GitHub/Graphs/mappop/census-historic-population-borough.csv")
 london.data.melt <- melt(london.data, id = c("Area.Code", "Area.Name"))
 #melt is a useful reshape tool
 
@@ -51,4 +52,4 @@ library(shiny)
 runExample("05_sliders") 
 
 #where we got the run code from http://shiny.rstudio.com/reference/shiny/latest/runApp.html
-runApp("//barracuda/users/alice.daish/My Documents/DEV/Graphs/shiny")
+runApp("C:/Users/sarah inspiron/Documents/GitHub/Graphs/mappop/shiny")
